@@ -1,0 +1,44 @@
+.warp{
+  background-color: #293B29;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-bg{
+  background-image: url(../img/clock-bg.svg);
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  position: relative;
+  img{
+    position: absolute;
+  }
+}
+.hour-hand,.minute-hand,.second-hand{
+  left: 50%;
+}
+
+.hour-hand{
+  top: 50%;
+  transform:translateY(-50%) rotate(0deg);
+  transform-origin:0 50%;
+  z-index: 100;
+}
+.minute-hand{
+  top: calc(50% - 96px);
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin:50% 100%;
+  z-index: 10;
+}
+.second-hand{
+  top: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin:50% 0;
+  z-index: 1;
+}
+
